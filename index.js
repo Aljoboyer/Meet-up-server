@@ -20,6 +20,10 @@ app.use(express.urlencoded({limit: '50mb'}));
 
 app.use('/user', UserRoutes)
 
+app.get('/', (req, res) => {
+    res.send('Mark Polo Server Is Connected');
+})
+
 app.listen(port, () => {
     console.log(`Mark Polo Server Port is ${port}`);
 });
